@@ -59,6 +59,7 @@ while True:
     input("")
     break
 while True:
+#asiakas on kirjautunut tai mennyt vierailijana ja nyt kysytään halutaanko laskinta tai celsiuksesta fahrenheitteihin laskuria.
     print("mitä haluaisit tehdä?")
     kysymys3=input("laskin(L) / Celsiuksesta Fahrenheitteihin laskin(cf).\n[L/CF]:")
     if kysymys3 == "L":
