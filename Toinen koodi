@@ -1,0 +1,42 @@
+  while True:
+    print(" tervetuloa rafaelin \nT = TULO\nM = MENO\nB = Budjetti\n laskuriin!")
+    input("paina ENTER kun haluat aloittaa")
+    menot=float(input("paljonko menoja oli viime kuussa?\n:"))
+    tulot=float(input("paljonkoja tuloja oli viime kuussa?\n:"))
+    kysymys2=input("haluatko nyt laskea tulojen ja menojen summan?\n [y / n]:")
+    if kysymys2=="n":
+        break
+    if kysymys2=="y":
+        tmsumma=tulot-menot
+        if tmsumma < 0:
+            print(tmsumma)
+            print("\n\n\n\nolette menossa vararikkoon, kannattaa pienentää menojanne!")
+        if tmsumma>0:
+            print(tmsumma)
+            print("\n\n\n\nteillä on hyvä tilanne rahan suhteen, hyvä!")
+            
+        
+        break
+while True:
+    kysymys=input("haluatko budjetti laskurin?\n [y / n]")
+    if kysymys=="n":
+        break
+    if kysymys=="y":
+        budget=float(input("anna budjettisi per kuukausi euroissa\n:"))
+        if menot < budget:
+            print("\n\n\n\nsinulla on budjetissa tarpeeksi rahaa, viime kuun menojen perustellen tälle kuulle")
+            print(" sinulla on budjetista ylijäävää rahaa", budget-menot, "euroa")
+            print("  joten yhteensä teillä on ylijäävää rahaa", budget+tulot-menot)
+            break
+        if menot > budget:
+            print("\n\n\n\nsinulla ei luultavammin ole tarpeeksi rahaa ens kuulle, viime kuun menojen perusteella.")
+            print(" sinulla on tililä", tmsumma,"euroa. kannattaa vähentää menoja sillä teijän budjetti on.",budget)
+            if budget-tmsumma<0:
+                print("budjettinne on isompi mitä teijän loppuvoitto. kannattaa vähentää menoja")
+                break
+            if budget-tmsumma>0:
+                print("budjettinne on onneksi pienempi mitä loppuvoitto. voitte lisätä budjettia tai pysyä samana tän hetkisen tietojen mukaan!")
+                break
+            if budget-tmsumma==0:
+                print("ootte just ja just tasoissa menojen ja tulojen tasoilla tilinne on 0!")
+            
